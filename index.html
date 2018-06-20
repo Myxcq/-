@@ -124,8 +124,10 @@
 			
 			#main{
 				height: 318px;
+				position: relative;
 			}
 			.content {
+				float:left;
 				height: 256px;
 				margin-top: 32px;
 				margin-left: 16px;
@@ -138,6 +140,10 @@
 				border: 1px solid #dbdbdb;
 				border-top: 2px solid #04b141;
 				margin-right: 26px;
+			}
+			.content>div:hover{
+				transform: translateY(-2px);
+				border: 1px solid #04b141;
 			}
 			.content>div:nth-child(1) {
 				background: white url(img/main_1.png) bottom center no-repeat;
@@ -215,6 +221,14 @@
 				border-left: 1px solid #4f5963;
 				padding-left: 25px;
 			}
+			
+			#QR_code{
+				height: 166px;
+				width: 120px;
+				position: absolute;
+				top: 550px;
+				right: 10px;
+			}
 		</style>
 	</head>
 
@@ -274,23 +288,23 @@
 					<div>
 						<h3>微信商学院</h3>
 						<p>微信商业使用案例</p>
-						<button>go</button>
+						<button>Go</button>
 					</div>
 
 					<div>
 						<h3>微信技术院</h3>
 						<p>微信技术开发宝典</p>
-						<button>go</button>
+						<button>Go</button>
 					</div>
 					<div>
 						<h3>玩转微信</h3>
 						<p>发现微信最潮的玩法</p>
-						<button>go</button>
+						<button>Go</button>
 					</div>
 					<div>
 						<h3>微信时刻</h3>
 						<p>最新资讯&nbsp;专家见解</p>
-						<button>go</button>
+						<button>Go</button>
 					</div>
 				</div>
 			</div>
@@ -330,6 +344,10 @@
 					<img src="img/footer_right.png"/>
 				</div>
 			</div>
+		</div>
+		
+		<div id="QR_code">
+			<img src="img/main_QR.png"/>
 		</div>
 	</body>
 
