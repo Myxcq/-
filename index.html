@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 		<title></title>
 		<style>
-			*{
+			* {
 				margin: 0;
 				padding: 0;
 			}
-			#top{
+			
+			html,
+			body {
+				background: #f0f0f0;
+			}
+			
+			.top_inner,
+			.nav_inner,
+			.banner_bottom_inner,
+			.main_inner,
+			.footer_inner {
+				width: 1007px;
+				margin: 0 auto;
+			}
+			
+			
+			#top {
+				width:100%;
 				height: 70px;
 				background: #353e47;
 				border-bottom: 2px solid #212a33;
 			}
-			.top_inner,.nav_inner{
-				width:1007px;
-				margin:0 auto;
+			.top_left {
+				float: left;
 			}
-			.top_left{
-				float:left;
-			}
-			.top_right{
-				float:left;
+			.top_right {
+				float: left;
 				margin-left: 280px;
 			}
-			#nav{
-				height: 32px;
-				background: #04b141;
-			}
-			#banner{
-				height: 358px;
-				background: url(img/img-1_14.png) no-repeat center;
-			}
-			#logo_img{
-				float:left;
+			#logo_img {
+				float: left;
 				margin-top: 10px;
 			}
-			#logo_name{
-				float:left;
+			#logo_name {
+				float: left;
 				margin-top: 26px;
 				margin-left: 6px;
-				color:green;
+				color: green;
 			}
-			#v_span{
-				float:left;
-				height:40px;
+			#v_span {
+				float: left;
+				height: 40px;
 				border: 0;
 				border-left: 1px solid #131d26;
 				border-right: 1px solid #3e464f;
 				margin-left: 18px;
 				margin-top: 20px;
 			}
-			#search_input{
-				float:left;
+			#search_input {
+				float: left;
 				width: 378px;
 				height: 32px;
 				margin-top: 20px;
@@ -61,8 +67,8 @@
 				border: 0;
 				border-radius: 4px 0 0 4px;
 			}
-			#search_btn{
-				float:left;
+			#search_btn {
+				float: left;
 				width: 50px;
 				height: 32px;
 				margin-top: 20px;
@@ -70,34 +76,148 @@
 				border-radius: 0 4px 4px 0;
 				background: #04b141 url(img/img-1_06.png) no-repeat center;
 			}
-			.nav_home_item{
+			
+			
+			#nav {
+				width: 100%;
+				height: 36px;
+				background: #04b141;
+			}
+			.nav_inner>ul {
+				list-style: none;
+				margin-left: 32px;
+			}
+			.nav_inner>ul>li {
 				float: left;
-				margin-left: 10px;
-				width: 108px;
+				list-style: none;
+				margin-top: 8px;
 			}
-			.nav_home_item img{
-				float:left;
-				margin-top: 10px;
+			.nav_home_item {
+				background: url(img/img-1_11.png) no-repeat 0 center;
+				padding-left: 7px;
 			}
-			.nav_item{
+			.nav_inner>ul>li>a {
+				color: white;
+				padding: 0 13px;
+				text-decoration: none;
+				border-right: 1px solid #008a45;
+			}
+			
+			
+			#banner {
+				height: 358px;
+			}
+			#banner>img {
+				width: 100%;
+			}
+			.banner_bottom {
+				height: 36px;
+				background: white;
+			}
+			.banner_bottom_inner>img {
 				float: left;
-				width: 108px;
 			}
-			.nav_item p,.nav_home_item p{
-				float:left;
-				color:white;
-				margin-top:5px;
-				margin-left:10px;
+			.banner_bottom_inner>p {
+				float: left;
+				padding: 0 13px;
 			}
-			.nav_home_item span,.nav_item span{
-				float:left;
-				height:22px;
-				margin-top: 5px;
+			
+			#main{
+				height: 318px;
+			}
+			.content {
+				height: 256px;
+				margin-top: 32px;
 				margin-left: 16px;
-				border: 1px solid #3e464f;
+			}
+			.content>div {
+				float: left;
+				width: 224px;
+				height: 256px;
+				text-align: center;
+				border: 1px solid #dbdbdb;
+				border-top: 2px solid #04b141;
+				margin-right: 26px;
+			}
+			.content>div:nth-child(1) {
+				background: white url(img/main_1.png) bottom center no-repeat;
+			}
+			.content>div:nth-child(2) {
+				background: white url(img/main_2.png) bottom center no-repeat;
+			}
+			.content>div:nth-child(3) {
+				background: white url(img/main_3.png) bottom center no-repeat;
+			}
+			.content>div:nth-child(4) {
+				background: white url(img/main_4.png) bottom center no-repeat;
+				margin-right: 0;
+			}
+			.content>div>h3 {
+				margin-top: 16px;
+			}
+			.content>div>p {
+				margin-top: 14px;
+				color: #999;
+			}
+			.content>div>button {
+				margin-top: 16px;
+				padding: 5px 26px 5px 26px;
+				color: #707070;
+				font-size: 20px;
+				text-align: center;
+				cursor: pointer;
+				border: 1px solid #e3e3e3;
+				background: white url(img/img6.png) right 20% bottom 47% no-repeat;
+			}
+			
+			
+			#footer {
+				height: 508px;
+				margin-top: 32px;
+				padding-top: 24px;
+				background: #46505a url(img/footer_3.png) repeat-x;
+			}
+			.footer_inner{
+				height: 100%;
+				background: url(img/footer_2.png) bottom no-repeat;
+			}
+			.footer_inner_left{
+				height: 350px;
+				padding-right: 56px;
+				float: left;
+				border-right: 1px solid #38424c;
+			}
+			.footer_inner_left>div {
+				margin-left: 46px;
+				margin-top: 24px;
+				color: white;
+			}
+			.footer_inner_left>div>img {
+				margin-top: 10px;
+				cursor: pointer;
+			}
+			.footer_inner_left>div>h3 {
+				margin-bottom: 6px;
+			}
+			.footer_inner_left>div>ul {
+				width: 498px;
+				margin-left: 8px;
+				list-style: none;
+				line-height: 22px;
+				color: #96a0aa;
+			}
+			.footer_inner_left>div>ul>li {
+				float: left;
+				margin-right: 20px;
+			}
+			.footer_inner_right{
+				float:left;
+				border-left: 1px solid #4f5963;
+				padding-left: 25px;
 			}
 		</style>
 	</head>
+
 	<body>
 		<div id="top">
 			<div class="top_inner">
@@ -112,38 +232,105 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="nav">
 			<div class="nav_inner">
-				<div class="nav_home_item">
-					<img src="img/img-1_11.png">
-					<p>学院首页</p>
-					<span></span>
-				</div>
-				<div class="nav_item">
-					<p>微信微商城</p>
-					<span></span>
-				</div>
-				<div class="nav_item">
-					<p>微信技术院</p>
-					<span></span>
-				</div>
-				<div class="nav_item">
-					<p>玩转微信</p>
-					<span></span>
-				</div>
-				<div class="nav_item">
-					<p>微信时刻</p>
-					<span></span>
-				</div>
-				<div class="nav_item">
-					<p>直播课程</p>
-					<span></span>
+				<ul>
+					<li class="nav_home_item">
+						<a href="#">学院首页</a>
+					</li>
+					<li>
+						<a href="#">微信商学院</a>
+					</li>
+					<li>
+						<a href="#">微信技术院</a>
+					</li>
+					<li>
+						<a href="#">玩转微信</a>
+					</li>
+					<li>
+						<a href="#">微信时刻</a>
+					</li>
+					<li>
+						<a href="#">直播课程</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="banner">
+			<img src="img/img-1_14.png" />
+			<div class="banner_bottom">
+				<div class="banner_bottom_inner">
+					<img src="img/img-1_15.png" />
+					<p>直播还没开始哦，看看我们的推荐吧！</p>
 				</div>
 			</div>
 		</div>
-		
-		<div id="banner"></div>
-	
 
-</body></html>
+		<div id="main">
+			<div class="main_inner">
+				<div class="content">
+					<div>
+						<h3>微信商学院</h3>
+						<p>微信商业使用案例</p>
+						<button>go</button>
+					</div>
+
+					<div>
+						<h3>微信技术院</h3>
+						<p>微信技术开发宝典</p>
+						<button>go</button>
+					</div>
+					<div>
+						<h3>玩转微信</h3>
+						<p>发现微信最潮的玩法</p>
+						<button>go</button>
+					</div>
+					<div>
+						<h3>微信时刻</h3>
+						<p>最新资讯&nbsp;专家见解</p>
+						<button>go</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div class="footer_inner">
+				<div class="footer_inner_left">
+					<div>
+						<h3>开放平台</h3>
+						<img src="img/footer_1.png" />
+					</div>
+					<div>
+						<h3>合作伙伴</h3>
+						<ul>
+							<li>TechWeb</li>
+							<li>CSDN</li>
+							<li>36Kr</li>
+							<li>DoNews</li>
+							<li>APP游戏部落</li>
+							<li>天极网</li>
+							<li>凤凰网科技频道</li>
+							<li>易观网</li>
+							<li>优亿开发</li>
+							<li>雷锋网</li>
+							<li>飞象网</li>
+							<li>数码港</li>
+							<li>艾瑞网</li>
+							<li>落伍者</li>
+							<li>LAMP人</li>
+							<li>QQ</li>
+							<li>腾讯网</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer_inner_right">
+					<img src="img/footer_right.png"/>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
